@@ -1,12 +1,16 @@
+//★
+//내부클래스와 클래스통신
 package day16;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
 public class Test06 {
 		JFrame f;
 		JPanel pan, sub;
 		JButton btn1, btn2;
+		
 		
 	public Test06() {
 		f = new JFrame("*** 색 변경 ***");
@@ -23,9 +27,14 @@ public class Test06 {
 		// 버튼 만들고
 		btn1 = new JButton("색 변경");
 		//색상변경 이벤트
+
+		
+		
 //		btn1.addActionListener(new BtnEvent02());
 //		btn1.addActionListener(setBg());
 		btn1.addActionListener(new BtnEvent04(this));
+
+
 		
 		btn2 = new JButton("닫기");
 		
@@ -38,12 +47,16 @@ public class Test06 {
 //		-> ActionListener evt = new BtnEvent01();	//자동형변환
 		
 //		btn2.addActionListener(evt1);
+		
+		
+		//--------------------무명 내부클래스--------------------
 		btn2.addActionListener(new ActionListener( ) {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
 				}
 		});
+		
 		
 		// sub에 버튼 추가하고
 		sub.add(btn1, BorderLayout.WEST);
@@ -54,18 +67,22 @@ public class Test06 {
 		f.add(pan, BorderLayout.CENTER);
 		f.add(sub,BorderLayout.SOUTH);
 		f.setSize(300, 350);
-		f.setResizable(false);
+//		f.setResizable(false);
 		f.setVisible(true); //기본셋팅값 안보이게 되어있다.
 	}
+	
+	
 	public static void main(String[] args) {
 		new Test06();
 	}
 
+	
+	
 //-------------------------------------------------------------------------------	
 	
 	
 	
-	//전역 내부 클래스 -일반적으로 부르는 내부클래스
+	//----------전역 내부 클래스 -일반적으로 부르는 내부클래스----------
 	class BtnEvent02 implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -83,9 +100,9 @@ public class Test06 {
 	
 
 	
-	//색상변경 이벤트를 반환해주는 함수 ~안에 클래스
+	//색상변경 이벤트를 반환해주는 함수
+	//--------------------지역 내부 클래스--------------------
 	public ActionListener setBg() {
-		//지역 내부 클래스
 		class BtnEvent03 implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -115,13 +132,16 @@ class BtnEvent01 implements ActionListener{
 	}
 }
 
+
+
+//---------- 외부클래스에서 내부클래스 데이터바꿈----------
+//내부클래스아냐( 클래스 통신 한거임 )
 class BtnEvent04 implements ActionListener{
 	Test06 main;
 	
 	public BtnEvent04() {
-//		main = new Test06(); //전혀 다른 객체를 main이 기억하게 된다.
+//		main = new Test06(); //전혀 다른 객체를 main이 기억하게 된다. 중요개념★
 	}
-	
 	public BtnEvent04(Test06 main){
 		this.main = main;
 	}
