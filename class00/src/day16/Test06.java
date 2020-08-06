@@ -24,9 +24,8 @@ public class Test06 {
 		btn1 = new JButton("색 변경");
 		//색상변경 이벤트
 //		btn1.addActionListener(new BtnEvent02());
-		btn1.addActionListener(setBg());
-		
-		
+//		btn1.addActionListener(setBg());
+		btn1.addActionListener(new BtnEvent04(this));
 		
 		btn2 = new JButton("닫기");
 		
@@ -38,7 +37,13 @@ public class Test06 {
 		ActionListener evt1 = evt01;
 //		-> ActionListener evt = new BtnEvent01();	//자동형변환
 		
-		btn2.addActionListener(evt1);
+//		btn2.addActionListener(evt1);
+		btn2.addActionListener(new ActionListener( ) {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					System.exit(0);
+				}
+		});
 		
 		// sub에 버튼 추가하고
 		sub.add(btn1, BorderLayout.WEST);
@@ -109,3 +114,28 @@ class BtnEvent01 implements ActionListener{
 		System.exit(0);
 	}
 }
+
+class BtnEvent04 implements ActionListener{
+	Test06 main;
+	
+	public BtnEvent04() {
+//		main = new Test06(); //전혀 다른 객체를 main이 기억하게 된다.
+	}
+	
+	public BtnEvent04(Test06 main){
+		this.main = main;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		//필요한 r,g,b 값을 만들고
+		int red = (int)(Math.random()*256);
+		int green = (int)(Math.random()*256);
+		int blue = (int)(Math.random()*256);
+		
+		//Color 객체를 만들고
+		Color color = new Color(red, green, blue);
+		main.pan.setBackground(color);
+	}
+}
+	
