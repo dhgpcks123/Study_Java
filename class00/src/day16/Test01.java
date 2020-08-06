@@ -1,3 +1,5 @@
+//★
+//예외처리
 package day16;
 
 import javax.swing.*;

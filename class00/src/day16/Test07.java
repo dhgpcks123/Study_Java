@@ -1,3 +1,4 @@
+//★
 package day16;
 
 import javax.swing.*;
@@ -12,15 +13,15 @@ public class Test07 {
 				//변수 초기화가 필요하다.
 				no = - 999;
 //				System.out.println(e);
-				e.printStackTrace();
+//				e.printStackTrace();
 				
 			}catch(Exception e) {
 				no = -777;
-				e.printStackTrace();
-			/*
+//				e.printStackTrace();
+//			/*
 			}finally {
-				no = -999;
-			 */
+				System.out.println("다시 실행하세요");
+//			 */
 			}
 			
 			

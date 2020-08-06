@@ -1,3 +1,5 @@
+//★★
+//전역 내부 클래스
 package day16;
 /*
 	전역 Inner Class
