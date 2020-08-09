@@ -1,4 +1,4 @@
-//★
+//★★
 package day17;
 
 import java.awt.*;
@@ -6,44 +6,46 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Test02 {
-
 	public Test02() {
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JPanel panel = new JPanel();
-		JPanel bPanel = new JPanel(new GridLayout(1, 5));
-		
+
+		JPanel panel =new JPanel();
+		JPanel bPanel = new JPanel(new GridLayout(1,5));
 		bPanel.setPreferredSize(new Dimension(500, 30));
 		
-		/*
-		JButton btn1 = new JButton("01");
+		/*JButton btn1 = new JButton("01");
 		JButton btn2 = new JButton("02");
-		JButton btn3 = new JButton("03");
-		JButton btn4 = new JButton("04");
-		JButton btn5 = new JButton("05");
+		JButton btn3 = new JButton("02");
+		JButton btn4 = new JButton("02");
+		JButton btn5 = new JButton("02");
+
+		bPanel.add(btn1);
+		bPanel.add(btn2);
+		bPanel.add(btn3);
+		bPanel.add(btn4);
+		bPanel.add(btn5);
 		*/
-		String[] sArr = {"red","green","blue","Set","Close"};
 		JButton[] btn = new JButton[5];
-		for(int i =0 ; i<5 ; i++) {
-			btn[i] = new JButton((sArr[i]));
+		String[] sArr = {"red", "green", "blue", "Set", "Close"};
+		for(int i = 0 ; i<5 ; i ++) {
+			btn[i] = new JButton(sArr[i]);
 			btn[i].addActionListener(new BtnEvt());
 			bPanel.add(btn[i]);
-//			bPanel.add(new JButton("0"+(i+1)));	
+			
 		}
 		
-//		JButton btn1 = (JButton) bPanel.getComponent(0);
+		
 		
 		frame.add(panel, BorderLayout.CENTER);
 		frame.add(bPanel, BorderLayout.SOUTH);
-		
-		
 		
 		frame.setSize(500, 250);
 		frame.setVisible(true);
 		frame.setResizable(false);
 		
 	}
+	
 	public static void main(String[] args) {
 		new Test02();
 	}
@@ -52,7 +54,8 @@ public class Test02 {
 class BtnEvt implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
-		String str = e.getActionCommand(); //안에 내용 꺼내서 반환해줌.
+		String str = e.getActionCommand();
+		
 		switch(str) {
 		case "red":
 			System.out.println("빨강");

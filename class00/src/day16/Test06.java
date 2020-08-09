@@ -1,5 +1,5 @@
-//★
-//내부클래스와 클래스통신
+//★★★
+//내부클래스와 클래스통신- 몹시 중요하다!
 package day16;
 
 import java.awt.*;
@@ -7,155 +7,106 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Test06 {
-		JFrame f;
-		JPanel pan, sub;
-		JButton btn1, btn2;
-		
-		
+	JFrame f;
+	JPanel pan, sub;
+	JButton btn1, btn2;
+	
 	public Test06() {
-		f = new JFrame("*** 색 변경 ***");
+		f = new JFrame("***색 변경***");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		//색상이 표현 될 메인 판 만들고
+		//색상이 표현될 메인 판 만들고
 		pan = new JPanel();
 		pan.setBackground(Color.ORANGE);
 		
 		//버튼이 위치할 판 만들고
-		sub = new JPanel(new BorderLayout());
-		sub.setPreferredSize(new Dimension(300, 30));
+		sub = new JPanel(new GridLayout(1,2));
+		sub.setPreferredSize(new Dimension(300,30));
 		
-		// 버튼 만들고
+		//버튼 만들어주자.
 		btn1 = new JButton("색 변경");
-		//색상변경 이벤트
+		//색상변경 이벤트 추가.
+		
+//		BtnEvent02 colorChange = new BtnEvent02();
+//		btn1.addActionListener(colorChange);
+		btn1.addActionListener(new Test06_01(this));
+		
+		
+		btn2 = new JButton("닫  기");
+		//버튼에 이벤트 추가하기
+		btn2.addActionListener(new BtnEvent01());
+//		btn2.addActionListener(new BtnEvent01());
+		/*
+		btn2.addActionListener(new ActionListener() {
 
-		
-		
-//		btn1.addActionListener(new BtnEvent02());
-//		btn1.addActionListener(setBg());
-		btn1.addActionListener(new BtnEvent04(this));
-
-
-		
-		btn2 = new JButton("닫기");
-		
-		//버튼 크기 조절하고
-		btn1.setPreferredSize(new Dimension(142,30));
-		btn2.setPreferredSize(new Dimension(142,30));
-
-		BtnEvent01 evt01 = new BtnEvent01();
-		ActionListener evt1 = evt01;
-//		-> ActionListener evt = new BtnEvent01();	//자동형변환
-		
-//		btn2.addActionListener(evt1);
-		
-		
-		//--------------------무명 내부클래스--------------------
-		btn2.addActionListener(new ActionListener( ) {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					System.exit(0);
-				}
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+			
 		});
+		*/
+	
 		
+		//버튼 사이즈
+		btn1.setPreferredSize(new Dimension(143, 30));
+		btn2.setPreferredSize(new Dimension(143, 30));
 		
-		// sub에 버튼 추가하고
+		//sub판에 버튼 추가하고
 		sub.add(btn1, BorderLayout.WEST);
 		sub.add(btn2, BorderLayout.EAST);
 		
-		
-		
 		f.add(pan, BorderLayout.CENTER);
-		f.add(sub,BorderLayout.SOUTH);
+		f.add(sub, BorderLayout.SOUTH);
 		f.setSize(300, 350);
-//		f.setResizable(false);
-		f.setVisible(true); //기본셋팅값 안보이게 되어있다.
+		f.setResizable(false);
+		f.setVisible(true);
 	}
-	
-	
 	public static void main(String[] args) {
 		new Test06();
 	}
-
-	
-	
-//-------------------------------------------------------------------------------	
-	
-	
-	
-	//----------전역 내부 클래스 -일반적으로 부르는 내부클래스----------
+//전역 내부 클래스
 	class BtnEvent02 implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			//필요한 r,g,b 값을 만들고
+			//필요한 rgb값 만들고
 			int red = (int)(Math.random()*256);
 			int green = (int)(Math.random()*256);
 			int blue = (int)(Math.random()*256);
 			
-			//Color 객체를 만들고
-			Color color = new Color(red, green, blue);
+			//Color 객체를 만들어
+			Color color = new Color(red,green,blue);
 			pan.setBackground(color);
 		}
+
 	}
-
-	
-
-	
-	//색상변경 이벤트를 반환해주는 함수
-	//--------------------지역 내부 클래스--------------------
+//지역 내부 클래스
+	//함수를 만든다.
 	public ActionListener setBg() {
 		class BtnEvent03 implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//필요한 r,g,b 값을 만들고
+				// 필요한 rgb 값을 만들고
 				int red = (int)(Math.random()*256);
 				int green = (int)(Math.random()*256);
 				int blue = (int)(Math.random()*256);
 				
-				//Color 객체를 만들고
+				// Color 객체를 만들고
 				Color color = new Color(red, green, blue);
 				pan.setBackground(color);
 			}
 		}
-		
-		return new BtnEvent03();	//ActionListenr 타입으로 자동 형변환이 일어난다.
+		return new BtnEvent03();
 	}
+
+	
 }
-
-
 
 
 class BtnEvent01 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("프로그램을 종료합니다");
+		System.out.println("프로그램 종료한다");
 		System.exit(0);
 	}
 }
-
-
-
-//---------- 외부클래스에서 내부클래스 데이터바꿈----------
-//내부클래스아냐( 클래스 통신 한거임 )
-class BtnEvent04 implements ActionListener{
-	Test06 main;
-	
-	public BtnEvent04() {
-//		main = new Test06(); //전혀 다른 객체를 main이 기억하게 된다. 중요개념★
-	}
-	public BtnEvent04(Test06 main){
-		this.main = main;
-	}
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		//필요한 r,g,b 값을 만들고
-		int red = (int)(Math.random()*256);
-		int green = (int)(Math.random()*256);
-		int blue = (int)(Math.random()*256);
-		
-		//Color 객체를 만들고
-		Color color = new Color(red, green, blue);
-		main.pan.setBackground(color);
-	}
-}
-	

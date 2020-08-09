@@ -1,4 +1,4 @@
-//★★
+//★★★
 //무명 내부클래스
 
 package day16;
@@ -6,7 +6,7 @@ package day16;
 public class Test05 {
 
 	public Test05() {
-/*
+		/*
 		Ju j = new Ju();
 		j.abc(); //
 */	
@@ -65,4 +65,3 @@ class Ju implements Ifc{
 //클래스 이름 시작은 대문자로!
 //클래스 만드는 방법 - [접근지정자] [속성] class 클래스이름{ }
 //반환값타입같은 거 없다... 뇨석아
-

@@ -1,5 +1,5 @@
-//★
-//Dim~ Dimension설명하기 위해 만든 클래스
+//★★
+//.preferredSize(Dimension(10,15));를 쓰는 이유라는데... 왜 굳이?
 package day17;
 
 public class Sagak {
@@ -8,14 +8,11 @@ public class Sagak {
 	
 	public Sagak() {}
 	public Sagak(int width, int height) {
-		this(new Dim(width, height));
+		
 	}
 	public Sagak(Dim dim) {
 		width = dim.width;
-		height =dim.height;
+		height = dim.height;
 		area = width*height;
-				
 	}
-	
 }
-
