@@ -5,10 +5,7 @@ package day17;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
-import event.CloseEvt;
-import event.ChooseEvent;
-import event.ColorSet;
+import day17.event.*;
 
 public class ColorPick extends JFrame {
 	public ColorClass main;

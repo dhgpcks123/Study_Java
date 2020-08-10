@@ -57,7 +57,7 @@ public class Test08 {
 		
 		
 //------------------------------버튼에 기능을 넣어준다.	
-		BtnEvent01 evt01 = new BtnEvent01();
+		BtnEve evt01 = new BtnEve();
 		ActionListener evt1 = evt01;
 // -> ActionListener evt = new BtnEvent01();//자동형변환
 		//근데 이거 왜 자동형변환해주는거지?
@@ -90,7 +90,7 @@ public class Test08 {
 
 //종료버튼에 기능을 먼저 넣어줄건데
 //첫 번째 방법
-class BtnEvent01 implements ActionListener{
+class BtnEve implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		System.out.println("프로그램을 종료합니다");
