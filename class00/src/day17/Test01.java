@@ -109,7 +109,7 @@ class BtnEvent03 {
 		});
 		
 		btn3 = new JButton("메인색변경");
-		btn2.addActionListener(new ActionListener() {
+		btn3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				main.pan.setBackground(pan.getBackground());
