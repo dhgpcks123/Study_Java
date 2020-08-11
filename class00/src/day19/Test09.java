@@ -20,7 +20,7 @@ public class Test09 {
 			break;
 		}
 		
-		Pattern pattern = Pattern.compile("^[\\w3가-힣-_]{3,}@[\\w가-힣]{3,}[.][a-zA-Z가-힣]{2,}$");
+		Pattern pattern = Pattern.compile("^[\\w3가-힣-_]{3,10}@[\\w가-힣]{3,10}[.][a-zA-Z가-힣]{2,10}$");
 		
 		Matcher match = pattern.matcher(mail);
 		
