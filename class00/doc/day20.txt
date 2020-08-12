@@ -71,7 +71,7 @@ Calender 클래스
 	java.text패키지 안에 있음
 ==> 주로 처리된 결과를 보기좋게 형식이 있는 문자열로 만들기(출력하기) 위한 목적으로 사용되어지는 클래스...
 
-	1. DecimalFormat(Decimal..? 십진법의?) > Test03 ★★★
+	1. DecimalFormat(Decimal..? 십진법의?) > Test03 ★★★ (디시멀포맷)
 		==> 처리결과 중 숫자를 형식화 된 문자열로 만들기 위한 클래스
 		
 		생성 방법 ]
@@ -239,10 +239,10 @@ List 계열
 		
 		3. 데이터를 꺼내는 함수
 			get(int index);
-			elementAt(int index);
-			firstElement()
-			lastElement()
-			elements() //모두 꺼내줌
+			elementAt(int index); // index정한 곳에꺼 꺼내줌.
+			firstElement() //요소 첫번째꺼 꺼내줌
+			lastElement() //요소 마지막꺼 꺼내줌
+			elements() //참조하고 있는 주소 꺼내줌
 		
 		참고 ]
 			E, V, K 라고 표현되어 있는 것은 Object를 의미하는 제너릭 용어이다.

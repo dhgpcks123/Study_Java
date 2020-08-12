@@ -25,8 +25,19 @@ public class Test10 {
 		}
 		System.out.println();
 		for(int i = 0 ; i <v.size() ; i ++) {
+			System.out.print(v.elementAt(i)+", ");
+		}
+		System.out.println();
+		System.out.println();
+		for(int i = 0 ; i <v.size() ; i ++) {
 			System.out.print((int)v.get(i)+i+", ");
 		}
+		
+		System.out.println("//////////////////////");
+		System.out.println(v.elements());
+		System.out.println("last :"+v.lastElement());
+		System.out.println("false : "+v.firstElement());
+		System.out.println("elementAt : "+v.elementAt(1));
 	}
 
 	public static void main(String[] args) {

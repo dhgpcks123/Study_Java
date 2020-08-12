@@ -1,4 +1,4 @@
-//★
+//★★
 //Calendar클래스
 package day20;
 
@@ -25,6 +25,7 @@ public class Test02 {
 		System.out.println("오늘 날짜 : "+year+"년"+month+"월"+date+"일");
 		System.out.println("-------------");
 		System.out.println(day+"일 "+getYoil(yoil)+"");
+		
 	}
 	
 	public String getYoil(int day) {

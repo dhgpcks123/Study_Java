@@ -1,6 +1,9 @@
-//★
+//★★
 // Data()클래스, Thread
 package day20;
+/*
+	date클래스를 이용해 현재 시간과 요일을 출력해보세요
+ */
 
 import java.util.*;
 public class Test01 {
@@ -8,7 +11,7 @@ public class Test01 {
 	public Test01() {
 		// 날짜 객체를 만든다
 		Date d = new Date(); //객체 만드는 '순간'의 시간을 인스턴스에 저장.
-		// 현재 시간을 출력한다.
+		//현재 시간을 출력한다.
 		for(int i =0 ;i<3 ; i++) {
 		System.out.println((d.getYear()+1900)+"년"+(d.getMonth()+1)+"월"+d.getDate()+
 				"일"+getYoil(d.getDay())+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
@@ -63,6 +66,8 @@ public class Test01 {
 		}
 		return yoil;
 	}
+	
+	
 
 	public static void main(String[] args) {
 		new Test01();

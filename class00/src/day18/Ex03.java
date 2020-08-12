@@ -19,39 +19,30 @@ import javax.swing.JOptionPane;
 public class Ex03 {
 
 	public Ex03() {
-		Stud[] student = new Stud[2];
-		for(int i = 0 ; i<2; i++) {
-			try {
-				student[i].name = JOptionPane.showInputDialog("이름을 입력하세요");
-				
-				if( i!=0 && student[i].name.equals(student[i-1].name)) {
-					throw new Exception();
-				}
+		Stud[] stud = new Stud[2];
+		for(int i = 0 ; i<stud.length ; i++) {
+			String str = JOptionPane.showInputDialog("이름을 입력하세요");
+			
+			try{
+				if(i!=0 && str.equals(stud[i-1].name)) {
+					throw new Exception();}
 			}catch(Exception e) {
-				JOptionPane.showMessageDialog(null, "다시 입력하세요");
+				JOptionPane.showMessageDialog(null, "같은 이름을 입력했습니다.");
 				i--;
 			}
-			
 			int[] score = new int[4];
-			for(int j = 0 ; j<4; j++) {
-				int no = (int)(Math.random()*100-10+1)+10;
-				score[j] = no;
-			}		
-			student[i] = new Stud(student[i].name,score[0],score[1],score[2],score[3]);
+			for(int j = 0 ; j<4 ; j++) {
+				score[j] = (int)(Math.random()*41 + 60);
 		}
+			stud[i] = new Stud(str,score[0],score[1],score[2],score[3]);
+		}
+		JOptionPane.showMessageDialog(null, stud[0]+"\n"+stud[1]);
 		
-		
-		//점수를 입력해주자.
-		String msg = student[0].name.equals(student[1].name) ? "같은 " : "다른 ";
-		JOptionPane.showMessageDialog(null, "두 학생은 " + msg + "학생입니다.\n" + student[0] + "\n" + student[1]);
-
 	}
 	public static void main(String[] args) {
 		new Ex03();
 	}
-	
 }
-
 //-------------------------------------------------
 class Stud {
 	String name;
@@ -65,16 +56,15 @@ class Stud {
 		this.jsp=jsp;
 		setTotal();
 	}
-	
 	public void setTotal() {
-		total = java+oracle+web+jsp;
+		total= java+oracle+web+jsp;
 	}
+
 	public String toString() {
-		return name+" 학생의 성적 : java-"+java+", oralce-"+oracle+", web-"+web+", jsp-"+jsp+" total-"+total;
+		return name + " 학생의 성적 : java - " + java + ", oracle - " + oracle + ", web - " + web + ", jsp - " + jsp + ", total - " + total;
 	}
 	
 	public boolean equals(Object o) {
 		return this.name == ((Stud)o).name;
 	}
-	
 }

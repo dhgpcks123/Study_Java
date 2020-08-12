@@ -1,4 +1,4 @@
-//★
+//★★
 //SimpleDateFormat
 package day20;
 /*

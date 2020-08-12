@@ -1,3 +1,5 @@
+//★★
+//Vector(int a, int b)
 package day20;
 
 import java.util.*;
@@ -9,11 +11,13 @@ public class Test09_02 {
 		for(int i = 0 ; i<21 ; i++) {
 			vec.add(10);
 		}
+		System.out.println(vec.size());
 		System.out.println("2. "+ vec.capacity());
 		
 		for(int i = 0 ; i<5 ; i++) {
 			vec.add(10);
 		}
+		System.out.println(vec.size());
 		System.out.println("3. "+ vec.capacity());
 		
 	}

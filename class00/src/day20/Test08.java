@@ -1,3 +1,5 @@
+//★★
+//자동형변환, 자주 나오는 거 보니 중요한 개념이긴 한 듯?
 package day20;
 
 public class Test08 {

@@ -1,4 +1,4 @@
-//★
+//★★
 //DicimalFormat
 package day20;
 
