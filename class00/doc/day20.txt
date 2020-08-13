@@ -76,7 +76,7 @@ Calender 클래스
 		
 		생성 방법 ]
 		
-			DicemalFormat(String pattern)을 주로 이용합니다.
+			DecimalFormat(String pattern)을 주로 이용합니다.
 			==> 어떤 모양으로 변환시킬지를, 패턴을 알려주면 만들어 준다.
 
 			주요함수
