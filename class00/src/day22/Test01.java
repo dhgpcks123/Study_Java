@@ -1,4 +1,4 @@
-//★
+//★★
 //HashSet 기본사용
 package day22;
 /*

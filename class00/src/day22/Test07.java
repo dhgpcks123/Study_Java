@@ -1,5 +1,5 @@
 //★
-//Hashtable
+//Hashtable은 hashMap의 구버전이다.
 package day22;
 
 import java.util.*;

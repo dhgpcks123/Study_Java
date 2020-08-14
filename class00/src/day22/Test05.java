@@ -1,3 +1,5 @@
+//★★
+//HashSet와 Hash코드 불러오기
 package day22;
 
 import java.util.*;

@@ -41,6 +41,7 @@ Set 계열
 				
 				TreeSet(SotredSet<E> s)
 				==> TreeSet을 이용해서 다시 TreeSet을 만든다. 
+					Set을 만들어내는거야.
 				
 				참고함수 ]
 				
@@ -70,7 +71,8 @@ Map 계열
 		따라서 HashMap사용을 권장하고 있다.
 		
 		내부적으로 키값을 해쉬 테이블을 이용해서 정렬해서 보관한다.
-		
+		\
+	
 		주요함수 ]
 		
 			put(Object key, Object value)

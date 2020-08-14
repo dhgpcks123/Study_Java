@@ -1,3 +1,4 @@
+//★
 package day22.ex;
 /*
 	문제 2 ]
@@ -21,10 +22,37 @@ public class Ex02 {
 		for(Object o : set) {
 			System.out.print(o+", ");
 		}
+		System.out.println();
+		ArrayList listR =new ArrayList(set);
+		Collections.reverse(listR);
+		
+		for(int i = 0 ; i<listR.size(); i++) {
+			System.out.print(listR.get(i)+", ");
+		}
+		
+		
+		
 		
 		//정렬방식을 내림차순으로 변경해서 저장해보자.
-		Compara
+		System.out.println();
+		TreeSet setR = new TreeSet(new Comparator() {
+
+			@Override
+			public int compare(Object o1, Object o2) {
+				return -((int)o1-(int)o2);
+			}
+		});
 		
+		for(int i = 0 ; i<10 ;i ++) {
+			setR.add((int)((Math.random()*99-11+1)+11));
+		}
+		
+		ArrayList list = new ArrayList(setR);
+		System.out.println(list.size());
+		System.out.println();
+		for(int i = 0 ; i <list.size(); i++) {
+			System.out.print(list.get(i)+", ");
+		}
 	}
 
 	public static void main(String[] args) {

@@ -1,3 +1,4 @@
+//★
 package day22.source;
 
 public class Nemo {
@@ -52,7 +53,7 @@ public void setArea(int area) {
 		
 	}
 	public int hashCode() {
-		return sero;
+		return 1;
 	}
 	/*
 		HashSet은 내부적으로 해쉬코드를 사용해서 데이터를 정렬하고 저장한다.

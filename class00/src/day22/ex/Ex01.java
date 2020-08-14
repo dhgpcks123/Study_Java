@@ -1,3 +1,4 @@
+//★
 package day22.ex;
 /*
 	1.

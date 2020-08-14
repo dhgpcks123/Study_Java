@@ -1,3 +1,4 @@
+//★
 package day22.source;
 
 import java.text.*;

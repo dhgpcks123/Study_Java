@@ -52,7 +52,7 @@ public class Samgak{
 	}
 	
 	public double hashcode() {
-		return width;
+		return 1;
 	}
 
 	

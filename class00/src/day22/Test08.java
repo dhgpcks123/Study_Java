@@ -1,4 +1,5 @@
-//★
+//★★
+//HashMap Map.Entry
 package day22;
 
 import java.util.*;

@@ -1,4 +1,4 @@
-//★
+//★★
 # day21
 
 	2. ArrayList
