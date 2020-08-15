@@ -34,15 +34,26 @@ public class Test07 {
 		System.out.println("name: " + table.get("name"));
 		// 데이터가 같더라도 키 값이 다르면 새로 입력된다.
 		
+		
+		System.out.println(table.toString());
+		//toString함수도 오버라이딩해둠 HashTable/HashMap
+		System.out.println(table.values());
+		//출력됨. table의 데이터값을 출력해주는 함수임.
+		//근데 출력형태가 Collection타입임. 그래서 넣어주기 됨
+		//▲가능한 이유
 		Collection col = table.values();
+//		Collections.sort((List) col); 형태만 그럴뿐.. 속은 아냐.		
 		for(Object o : col) {
 			System.out.print(o + " | ");
 		}
+		
+		//Collection에 담은 걸 배열로도 담을 수 있다.
 		System.out.println();
 		Object[] o = col.toArray();
 		for(int i = 0; i<o.length ; i++) {
 			System.out.print(o[i]+" | ");
 		}
+		
 		System.out.println();
 		Iterator itor = col.iterator();
 		while(itor.hasNext()) {
