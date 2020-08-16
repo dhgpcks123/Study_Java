@@ -1,4 +1,4 @@
-//★
+//★★
 //Hashtable은 hashMap의 구버전이다.
 package day22;
 
@@ -66,6 +66,8 @@ public class Test07 {
 			System.out.print(list.get(i)+ " | ");
 		}
 		
+		
+		//----------------------------------------
 		System.out.println();
 		Enumeration en  = table.keys();
 		while(en.hasMoreElements()) {
@@ -98,7 +100,11 @@ public class Test07 {
 			Object value = table.get(key);
 			System.out.print(key+"-"+value+" | ");
 		}
-		
+
+		//뭐야이거 그냥 다 쓸 수 있잖아?
+		//바꿀줄만알면 HashMap//Hashtable얘네도
+		//Collection에넣거나 ArrayList에넣어서
+		//정렬같은기능도 그냥 쓸 수 있음
 		
 	}
 

@@ -1,4 +1,4 @@
-//★
+//★★
 //클래스 Circle.java로 만들었음
 package day21;
 

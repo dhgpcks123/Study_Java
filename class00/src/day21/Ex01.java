@@ -1,5 +1,5 @@
+//★
 package day21;
-
 /*
 	ArrayList에
 	1.밑변과 높이를 랜덤하게 만들어서 삼각형을 만들고
@@ -12,7 +12,6 @@ package day21;
 	6.높이를 기준으로 정렬해서
 	6-1.출력하고 --> 외부클래스
  */
-
 import java.util.*;
 public class Ex01 {
 	public class Stand implements Comparator{

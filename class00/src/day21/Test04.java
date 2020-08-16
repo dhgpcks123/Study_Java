@@ -1,8 +1,9 @@
-//★
+//★★
 //ArrayList
 package day21;
 /*
-
+ 	함수를 만들어서
+	1~10까지 랜덤한 숫자
 	10개를 ArrayList에 담고
 	출력하고
 	정렬하고

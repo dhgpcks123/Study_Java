@@ -1,4 +1,4 @@
-//★
+//★★
 package day21;
 
 //반지름 ArrayList 10개 채우고

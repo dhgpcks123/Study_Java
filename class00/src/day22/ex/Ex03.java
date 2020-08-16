@@ -12,15 +12,6 @@ package day22.ex;
 		반 순으로 정렬돼서 저장되게하고 출력하고
 		만약 반이 같으면 점수 순으로 정렬되게 하고 출력하고....
  */
-
 public class Ex03 {
-
-	public Ex03() {
-		
-	}
-
-	public static void main(String[] args) {
-		new Ex03();
-	}
 
 }

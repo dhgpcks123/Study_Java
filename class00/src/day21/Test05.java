@@ -1,4 +1,4 @@
-//★
+//★★
 //클래스 Nemo.java로 만들었음
 package day21;
 

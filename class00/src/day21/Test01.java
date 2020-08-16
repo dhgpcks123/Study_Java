@@ -1,4 +1,4 @@
-//★
+//★★
 //Vector와 VO클래스 사용 > Test02먼저 풀고와
 package day21;
 /*

@@ -1,12 +1,12 @@
-//★
-//Won
+//★★
+//Won Compartor쓰기/ 무명클래스, 전역내부클래스, 외부 클래스
 package day21;
 /*
 	랜덤하게 10 ~ 50 사이의 반지름을 가지는 Won을
 	ArrayList에 10개 채우고
 	출력하고
 	정렬하고
-	출력하세요...
+	출력하세요... 3개의 출력방법
  */
 import java.util.*;
 public class Test07 {

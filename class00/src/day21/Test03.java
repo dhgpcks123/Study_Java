@@ -1,4 +1,4 @@
-//★
+//★★
 //Vector클래스와 toString오버라이딩
 package day21;
 

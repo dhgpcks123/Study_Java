@@ -1,4 +1,4 @@
-//★★
+//★★★
 //HashMap Map.Entry
 package day22;
 

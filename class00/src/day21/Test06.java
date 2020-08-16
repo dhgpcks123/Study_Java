@@ -1,4 +1,4 @@
-//★
+//★★
 //Won
 package day21;
 /*
