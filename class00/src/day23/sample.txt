@@ -1,0 +1,2 @@
+#은 properties에 주석처리할 때 씀
+name=ȫ�浿
