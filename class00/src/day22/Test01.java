@@ -1,4 +1,4 @@
-//★★
+//★★★
 //HashSet 기본사용
 package day22;
 /*
@@ -57,7 +57,8 @@ public class Test01 {
 		}//정렬된다?? String클래스 comparTo를 구현하고 있다. 옹???
 		
 //		방법 3 ] 향상된 for명령으로도 꺼낼 수 있다?? for명령쓰면...
-			//정렬해준데. (?확실치않음)그런 함수가 있나봐
+			//정렬해준데. (?확실치않음)그런 함수가 있나봐.
+			//아니야. 그런 기능 없음.
 		System.out.println("\n#22정렬 후 출력22");
 		for(Object o :set) {
 			System.out.println(o);

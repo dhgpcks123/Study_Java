@@ -1,4 +1,4 @@
-//★
+//★★
 package day23;
 /*
 	ArrayList에 문자열 데이터만 입력하도록

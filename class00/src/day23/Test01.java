@@ -1,10 +1,10 @@
-//★
+//★★
 package day23;
 
-import java.util.*;
 import java.io.*;
+import java.util.*;
 /*
-	Sample.txt를 읽어서 Map으로 저장해보자.
+	tel.txt를 읽어서 Map으로 저장해보자.
  */
 
 public class Test01 {
@@ -17,7 +17,7 @@ public class Test01 {
 		 */
 		FileInputStream fin = null;
 		try {
-			fin = new FileInputStream("src/day23/sample.txt"); //Stream시냇물. 빨대비유함
+			fin = new FileInputStream("src/day23/tel.txt"); //Stream시냇물. 빨대비유함
 //			fin = new FileInputStream("src/day23/tel.txt");
 			/*
 				경로는 절대경로를 이용해서
@@ -29,19 +29,18 @@ public class Test01 {
 			
 			//이제 파일의 내용을 Properties에 옮긴다
 			prop.load(fin);
-			//파일의 내용을 읽어서 Map으로 처리해놓았다.
-//			Properites맵의한종류이다.라고 생각하랭
-			
-			
+			prop.load(fin);
+			//파일의 내용을 읽어서 Properites를 통해 Map처럼
+//			처리해놨다. Properties는 맵의 한 종류라고 생각해라
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
 		//이제부터는 HashMap에 데이터가 저장된 것처럼 사용하면 된다.
 		
-		String name = (String)prop.get("name");
+		String hong = (String)prop.get("hong");
 //		String name = (String)prop.get("hong");
-		System.out.println("저장된 이름 : "+name);
+		System.out.println("저장된 전화번호: "+hong);
 		
 		// KeySet써서 키값-데이터값 출력해보기.
 		/*
