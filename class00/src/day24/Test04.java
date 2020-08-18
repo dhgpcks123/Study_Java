@@ -1,3 +1,5 @@
+//★★
+//System.in.read(); 문자하나 문자여러개 String(byte[], 시작, 길이);
 package day24;
 
 import java.io.*;

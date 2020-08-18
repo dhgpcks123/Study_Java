@@ -1,3 +1,5 @@
+//★ 못풀겠네...
+//목록 가져오기 list(), listFiles()/ FilenameFilter() - endsWith(), startsWith()
 package day24;
 /*
 	수업설명 문서가 있는 폴더 내의 파일 목록을 알아내자.

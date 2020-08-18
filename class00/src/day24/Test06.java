@@ -1,10 +1,12 @@
-//★
+//★★
 package day24;
 /*
- * C:\\Users\\class02\\git\\javaBasics\\class00\\src\\day24\\wtest\\FileText.txt
- * 의 내용을 읽어보자.
- */
-
+	C:\\Users\\class02\\git\\javaBasics\\class00\\src\\day24\\wtest\\FileText.txt
+	의 내용을
+	1. 한글자만 읽어보자.
+	2. 여러글자를 읽어보자.
+	3. 파일의 전체 내용을 읽어보자.
+*/
 import java.io.*;
 import java.util.Arrays;
 

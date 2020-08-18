@@ -1,9 +1,16 @@
+//★★
+//원하는 내용을 파일에 저장하는 프로그램을 만들자.
 package day24;
 
 import java.io.*;
 /*
-	원하는 내용을 파일에 저장하는 프로그램을 만들어보자.
- */
+	1. 한글자만 입력해보자.
+	2. 여러글자 입력해보자
+	3. 문자열중에 특정 부분만 저장하는 방법
+저장경로 : "C:\\Users\\class02\\git\\javaBasics\\class00\\src\\day24\\wtest\\FileText.txt"
+사용문자열 : Assigns the specified byte value to each element of the specified array of bytes.
+*/
+
 public class Test05 {
 
 	public Test05() {
