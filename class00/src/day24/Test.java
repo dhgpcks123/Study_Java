@@ -1,36 +1,37 @@
 package day24;
 
 import java.io.*;
-/*
-원하는 내용을 파일에 저장하는 프로그램을 만들어보자.
-*/
-//저장경로 "C:\\Users\\class02\\git\\javaBasics\\class00\\src\\day24\\wtest\\FileText.txt"
+import java.util.Arrays;
+//doc/고슴.jpg를 복사해본다.
 public class Test {
 	public Test() {
-		FileOutputStream file = null;
+		FileInputStream fin = null;
+		FileOutputStream fout = null;
 		
 		
 		
 		try {
-			//한글자만 입력해보자
-			file = new FileOutputStream("C:\\Users\\class02\\git\\javaBasics\\class00\\src\\day24\\wtest\\FileText.txt");
-//			file.write('t');
+			fin = new FileInputStream("doc/고슴.jpg");
+			fout = new FileOutputStream("doc/고슴복사.jpg");
 			
-			//2.여러글자 입력해보자
-//			byte[] strArray = str.getBytes();
-//			file.write(strArray);
+			while(true) {
+			byte[] aaa = new byte[1024];
+			Arrays.fill(aaa, (byte)0);	
+			int len = fin.read(aaa);
+			if(len== -1 )break;
+			String str= new String(aaa, 0, len);
+			fout.write(aaa, 0, len);
+			}
+
 			
-			//3. s부터 뽑아보자
-			String str =" of the specified array of bytes.";
-			int len = str.indexOf('e');
-			byte[] strArray = str.getBytes();
-			file.write(strArray, len,str.length()-len );
+			
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
 			try {
-				file.close();
+				fout.close();
+				fin.close();
 			}catch(Exception e) {
 				
 			}
