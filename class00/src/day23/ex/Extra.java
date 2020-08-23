@@ -1,3 +1,4 @@
+//★★
 package day23.ex;
 
 import day23.src1.*;

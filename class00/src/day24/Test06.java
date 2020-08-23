@@ -1,4 +1,4 @@
-//★★
+//★★★
 package day24;
 /*
 	C:\\Users\\class02\\git\\javaBasics\\class00\\src\\day24\\wtest\\FileText.txt

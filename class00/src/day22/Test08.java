@@ -18,16 +18,6 @@ public class Test08 {
 		map.put("도우너", "010-9876-5551");
 		map.put("마이콜", "010-3105-5459");
 		
-		/*
-		Set set = map.keySet();
-		Iterator itor = set.iterator();
-		while(itor.hasNext()) {
-			Object key = itor.next();
-			Object value = map.get(key);
-			System.out.println(key+" | "+value);
-		}
-		*/
-		
 		Set set = map.entrySet();
 		Iterator itor = set.iterator();
 		while(itor.hasNext()) {

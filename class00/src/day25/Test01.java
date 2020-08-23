@@ -1,4 +1,4 @@
-//★★
+//★★★
 //PrintStream을 사용해보자
 package day25;
 

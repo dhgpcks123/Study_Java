@@ -1,4 +1,4 @@
-//★★
+//★★★★
 //Scanner클래스를 사용해보자
 package day25;
 

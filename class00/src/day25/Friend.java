@@ -3,6 +3,7 @@ package day25;
 import java.io.*;
 
 public class Friend implements Serializable{
+	/*Serializable상속하려면 java.io.* 클래스를 import해야됨*/
 	private String name;
 	private int age;
 	private double height;

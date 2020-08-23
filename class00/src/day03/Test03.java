@@ -1,11 +1,13 @@
-//★★
+//★★★
 package day03;
 
 public class Test03 {
 	public static void main(String[] args) {
+		
 		int no = 100;
 		float no2 = 3.14f;
-		boolean bool = true;
+		boolean bool =true;
+		
 		
 		System.out.println(no + no2+"20");
 		System.out.println("False"+bool);

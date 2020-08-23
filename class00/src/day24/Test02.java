@@ -1,4 +1,4 @@
-//★★
+//★★★
 //File클래스와 getName()
 package day24;
 

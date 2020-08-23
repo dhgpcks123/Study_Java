@@ -1,4 +1,4 @@
-//★★
+//★★★
 //BufferedReader
 package day25;
 

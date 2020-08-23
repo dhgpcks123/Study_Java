@@ -14,8 +14,7 @@ public class Test06 {
 //		set.add(33);
 //		set.add(303);
 //		set.add(13);
-//		set.add(3);
-//		
+
 		set.add("고길동");
 		set.add("둘리");
 		set.add("고길동"); //중복

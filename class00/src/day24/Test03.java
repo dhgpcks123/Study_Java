@@ -1,4 +1,4 @@
-//★ 못풀겠네...
+//★ 못풀겠네... 마지막문제 2차포기;;
 //목록 가져오기 list(), listFiles()/ FilenameFilter() - endsWith(), startsWith()
 package day24;
 /*

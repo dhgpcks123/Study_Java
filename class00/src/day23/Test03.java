@@ -1,4 +1,4 @@
-//★★
+//★★★
 package day23;
 
 import java.io.*;

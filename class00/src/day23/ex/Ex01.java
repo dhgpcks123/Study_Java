@@ -1,4 +1,4 @@
-//★
+//★★
 package day23.ex;
 
 import day23.*; //iu.iu 파일은 패키지가 다르기 때문에....

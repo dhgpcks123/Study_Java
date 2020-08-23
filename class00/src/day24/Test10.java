@@ -1,4 +1,4 @@
-//★
+//★★
 package day24;
 /*
 	"src/day24/wTest/doutTest.txt"

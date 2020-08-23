@@ -1,4 +1,4 @@
-//★★
+//★★★
 //클래스 변수 내보내기
 package day25;
 import java.io.*;

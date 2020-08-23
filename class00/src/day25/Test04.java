@@ -1,5 +1,5 @@
-//★★
-//char단위를 사용하는 클래스를 이용해서 파일을 읽어보자. readLine도써봐
+//★★★
+//char단위를 사용하는 클래스를 이용해서 파일을 읽어보자
 package day25;
 
 import java.io.*;
