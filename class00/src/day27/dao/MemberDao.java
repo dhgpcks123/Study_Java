@@ -109,5 +109,7 @@ public class MemberDao {
 		System.out.println("아이디 중복체크 데이터베이스 작업 전담 처리함수");
 		return cnt;
 	}
+	
+	
 
 }
