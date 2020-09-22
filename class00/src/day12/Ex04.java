@@ -9,5 +9,24 @@ package day12;
 	
 */
 public class Ex04 {
+	public Ex04() {
+		
+		char[] chArr = new char[10];
+		for(int i =0; i<10;i++) {
+			char ch = (char)(Math.random()*('Z'-'A'+1)+'A');
+			chArr[i] = ch;
+		}
+		
+		String str ="";
+		for(int i = 0 ; i<chArr.length ; i++) {
+			str += chArr[i];
+		}
+		System.out.println(str);
+		
+	}
 
+	public static void main(String[] args) {
+		new Ex04();
+	}
 }
+

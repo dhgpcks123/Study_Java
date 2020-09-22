@@ -10,7 +10,7 @@ public class Test03 {
 	public Test03() {
 		
 		Sagak n1 =new Sagak(2,3);
-		Sagak n2 =new Sagak(3,4);
+		Sagak n2 =new Sagak(3,2);
 		
 		String msg =(n1.equals(n2)?"같은":"다른");
 		System.out.println(msg);

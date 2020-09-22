@@ -30,3 +30,4 @@ class Test06_01 implements Inter01{
 	}
 	
 }
+

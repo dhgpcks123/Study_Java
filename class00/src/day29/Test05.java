@@ -1,5 +1,5 @@
 package day29;
-
+//yield써보세요
 import day29.thread.*;
 
 public class Test05 {

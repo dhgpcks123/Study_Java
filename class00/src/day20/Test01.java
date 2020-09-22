@@ -4,7 +4,6 @@ package day20;
 /*
 	date클래스를 이용해 현재 시간과 요일을 출력해보세요
  */
-
 import java.util.*;
 public class Test01 {
 

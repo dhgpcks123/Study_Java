@@ -22,6 +22,40 @@ package day08;
 		뒤에서 부터 찾을 문자를 검색해서 해당 위치를 반환해준다.
 	 	
 */
+import javax.swing.*;
 public class Ex04 {
-
+	public Ex04(){
+		
+		while(true) {
+		String str = JOptionPane.showInputDialog("값을 입력해라");
+		if(str.equals("q")) break;
+		
+		char moyang = str.charAt(0);
+		int no1 = Integer.parseInt(str.substring(str.indexOf('/'),str.indexOf('/')+1));
+		int no2 = Integer.parseInt(str.substring(str.lastIndexOf('/')));
+		
+		double result = 0;
+		switch(moyang) {
+		case '0':
+				result = ((int)(no1*no1*Math.PI*100+0.5))/100;
+			break;
+			//111234.12345
+			//(int)11123412.345+5
+			//111234.12
+		case '3':
+				result= no1*no2*0.5;
+			break;
+		case '4':
+				result = no1*no2;
+			break;
+		default : System.out.println("잘못입력");	
+		}
+		
+		JOptionPane.showMessageDialog(null, result);
+		}
+		
+	}
+	public static void main(String[] args) {
+		new Ex04();
+	}
 }

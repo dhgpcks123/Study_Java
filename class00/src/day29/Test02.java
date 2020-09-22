@@ -1,5 +1,5 @@
 package day29;
-
+//인터페이스로 스레드구현하기
 import day29.thread.*;
 public class Test02 {
 

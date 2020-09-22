@@ -1,5 +1,5 @@
 package day29;
-
+//상속 superclass 이름지어주기
 
 import day29.thread.*;
 public class Test03 {

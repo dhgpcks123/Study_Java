@@ -1,5 +1,5 @@
 package day29;
-
+//interface쓰레드 이름지어주기^-^
 import day29.thread.*;
 public class Test04{
 

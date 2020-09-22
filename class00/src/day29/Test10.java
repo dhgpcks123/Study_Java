@@ -1,5 +1,6 @@
 package day29;
-
+//public int num을 main클래스에 선언하고 한 클래스엔 숫자 채우기를,
+//또 다른 클래스엔 숫자 읽기를..
 import day29.thread.*;
 public class Test10 {
 

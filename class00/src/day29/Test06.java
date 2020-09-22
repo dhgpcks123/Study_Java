@@ -1,5 +1,5 @@
 package day29;
-
+//block에 재워보세요 쿨쿨
 import day29.thread.*;
 public class Test06 {
 
