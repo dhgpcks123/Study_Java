@@ -1,6 +1,5 @@
 package jjokji;
 
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
@@ -8,20 +7,23 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 
+import jjokji.thread.*;
+
 public class Jjokji {
 	// Map이 두개가 필요하다.
 	// 아이디를 알면 ip를 찾을 수 있는 Map
 	// 아이피를 알면 아이디를 알 수 있는 Map
 	// properties클래스>맵의 형태로 저장됨. 단 들어가는 내용은 모두 문자열로 처리됨.
-	Properties idToIp, ipToId;
+	public Properties idToIp, ipToId;
 	
-	JList list;
+	JList<String> list;
 	JButton writeB;
 	JFrame fr;
+	SendFrame sFr;
 	
 	// UDP 통신은 DatagramSocket으로 통신을 한다.
 	
-	DatagramSocket sSocket, rSocket;
+	public DatagramSocket sSocket, rSocket;
 	/*
 		sSocket : 보내는 소켓
 		rSocket : 받는 소켓
@@ -35,6 +37,7 @@ public class Jjokji {
 	public Jjokji() {
 		setMap();
 		setUI();
+		setNetwork();
 	}
 
 	public static void main(String[] args) {
@@ -50,7 +53,19 @@ public class Jjokji {
 			 */
 			sSocket = new DatagramSocket();
 			rSocket = new DatagramSocket(9999);
-			
+			/*
+				소켓이 구성 된 상태이다.
+				누군가 접속한 상태는 아니다.
+				네트워크 회선에만 접속을 한 상태가 된다.
+				==> 네트워크가 가능한 상태가 됐다.
+				
+				이제 네트워크 구성이 완료가 됐으므로
+				쪽지를 보내고 받을 수 있는 상태가 됐다.
+				
+				따라서 쪽지를 받는 프로그램을 시작한다.
+			 */
+			ReceiveThread t = new ReceiveThread(this);
+			t.start();
 		}catch(Exception e) {
 			//소켓을 구성하는 도중 에러가 발생하면 이 프로그램은 통신을 할 수 없는
 			//프로그램이 되므로 아래 코드를 실행 할 필요가 없다.
@@ -84,7 +99,7 @@ public class Jjokji {
 		Set tmp = idToIp.keySet();
 		Vector<String> v = new Vector<String>(tmp);
 
-		list = new JList(v);
+		list = new JList<String>(v);
 		JScrollPane span = new JScrollPane(list);
 		
 		writeB = new JButton("쪽지쓰기");
@@ -102,7 +117,7 @@ public class Jjokji {
 				}
 				
 				// 보내기 위한 대화상자를 new 시킨다.
-				SendFrame sFr = new SendFrame(Jjokji.this);
+				sFr = new SendFrame(Jjokji.this);
 				sFr.field.setText(sid);
 				// 창 보이기 제어
 				sFr.wframe.setVisible(true);
