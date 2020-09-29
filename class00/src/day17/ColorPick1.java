@@ -1,10 +1,12 @@
 package day17;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
 
-import day17.event.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 public class ColorPick1 extends JFrame {
 	public ColorClass1 main;
 	
@@ -32,12 +34,7 @@ public class ColorPick1 extends JFrame {
 		btn3 = new JButton("닫  기");
 		
 		//button에 이벤트 추가하기.
-		//btn1
-		btn1.addActionListener();
-		//btn2
-		btn2.addActionListener();
-		//btn3
-		btn3.addActionListener();
+
 		
 		//button 사이즈 적용
 		btn1.setPreferredSize(new Dimension(80,20));
