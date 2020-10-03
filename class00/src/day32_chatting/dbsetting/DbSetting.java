@@ -1,4 +1,4 @@
-package chatting.dbsetting;
+package day32_chatting.dbsetting;
 
 
 public class DbSetting {

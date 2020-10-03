@@ -1,19 +1,10 @@
-package chatting.server;
+package day32_chatting.server;
 
-/*
-	채팅을 관리하는 서버
-		1. 접속 대기 소켓을 준비한다.
-		2. 접속받는다.
-		3. 접속자가 독립적으로 사용할 스레드 클래스를 만든다.
-		4. 이 안에서 데이터를 주고 받도록 한다.
-			데이터를 줄때는 모든 접속자에게 데이터를 주도록 처리한다.
- */
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-
-import chatting.server.thread.*;
+import day32_chatting.server.thread.ServerTrd01;
 public class ChatServer01{
 	ServerSocket server;
 	

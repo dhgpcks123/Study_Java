@@ -1,4 +1,4 @@
-package chatting.client;
+package day32_chatting.client;
 
 /*
 채팅을 할 수 있는 폼을 제공하고
@@ -11,14 +11,31 @@ package chatting.client;
 		1. 서버에 데이터를 보낸다.
 		2. 서버에서 준 데이터를 받아본다.
 */
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.io.*;
-import java.net.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.Socket;
 
-import chatting.client.thread.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+import day32_chatting.client.thread.ClientTrd01;
 public class ChatClient01 extends JFrame {
 	// 화면 관련 변수
 	public JTextArea area;

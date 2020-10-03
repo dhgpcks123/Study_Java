@@ -1,4 +1,3 @@
-//★★
 //MessageFormat
 package day20;
 /*	문제 1]

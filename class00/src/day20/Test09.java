@@ -23,6 +23,19 @@ public class Test09 {
 		System.out.println(len);
 		System.out.println("---------------------------");
 		
+		Vector vecT = new Vector(20, 5);
+		System.out.println("1. "+ vecT.capacity());
+		for(int i = 0 ; i<21 ; i++) {
+			vecT.add(10);
+		}
+		System.out.println(vecT.size());
+		System.out.println("2. "+ vecT.capacity());
+		
+		for(int i = 0 ; i<5 ; i++) {
+			vecT.add(10);
+		}
+		System.out.println(vecT.size());
+		System.out.println("3. "+ vecT.capacity());
 	}
 	
 	public static void main(String[] args) {

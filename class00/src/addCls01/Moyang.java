@@ -1,3 +1,4 @@
+package addCls01;
 
 public class Moyang {
 	

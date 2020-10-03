@@ -1,4 +1,4 @@
-package chatting.server.thread;
+package day32_chatting.server.thread;
 
 /*
 	각각의 접속한 클라이언트와 대화를 나눌 프로그램을 독립적으로 제작해서 사용할 예정이다.
@@ -6,13 +6,15 @@ package chatting.server.thread;
 	이 프로그램은 클라이언트와 대화를 할 목적으로 만든것이다.
 	따라서 서버의 메인 프로그램과 연결이 되어 있어야 한다.
  */
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.Socket;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-
-import chatting.server.*;
-import chatting.server.dao.*;
+import day32_chatting.server.ChatServer01;
+import day32_chatting.server.dao.MemberDao;
 
 public class ServerTrd01 extends Thread {
 	ChatServer01 main;

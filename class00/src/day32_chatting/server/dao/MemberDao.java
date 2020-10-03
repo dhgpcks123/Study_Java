@@ -1,4 +1,4 @@
-package chatting.server.dao;
+package day32_chatting.server.dao;
 
 /**
  * 	회원 정보 처리용 클래스

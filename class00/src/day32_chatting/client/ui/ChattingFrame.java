@@ -1,15 +1,18 @@
-package chatting.client.ui;
+package day32_chatting.client.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
-import chatting.client.*;
-import chatting.client.event.*;
+import day32_chatting.client.ClientController;
+import day32_chatting.client.event.EnterEvent;
 
 public class ChattingFrame extends JFrame {
 	public ClientController main;

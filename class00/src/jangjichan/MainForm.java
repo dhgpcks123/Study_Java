@@ -108,6 +108,7 @@ public class MainForm extends JFrame {
 		rFrame.replyB.addActionListener(evt);
 		rFrame.exitB.addActionListener(evt);
 	}
+
 	public static void main(String args[]) {
 		new MainForm();
 	}

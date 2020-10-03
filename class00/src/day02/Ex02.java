@@ -5,7 +5,9 @@ package day02;
 	그 숫자를 이용해서 원의 넓이와 둘레를 구해서 
 	출력해주는 프로그램을 작성하세요.
 */
-import java.util.*;
+
+import java.util.Scanner;
+
 public class Ex02 {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);

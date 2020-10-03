@@ -4,6 +4,7 @@ public class Circle {
 	private int rad; //반지름 기억할 변수
 	private double arround; //둘레 기억할 변수
 	private double area; //둘레 기억할 변수
+	//alt+shift+s source단축키, r누르면 Getters and Setters
 	public int getRad() {
 		return rad;
 	}

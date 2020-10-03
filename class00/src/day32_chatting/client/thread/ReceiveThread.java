@@ -1,10 +1,6 @@
-package chatting.client.thread;
+package day32_chatting.client.thread;
 
-import java.io.*;
-import java.awt.*;
-import javax.swing.*;
-
-import chatting.client.*;
+import day32_chatting.client.ClientController;
 
 public class ReceiveThread extends Thread {
 	public ClientController main;

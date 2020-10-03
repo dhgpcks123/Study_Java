@@ -1,11 +1,12 @@
-package chatting.client;
+package day32_chatting.client;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import chatting.client.ui.*;
-import chatting.client.event.*;
+import day32_chatting.client.event.ButtonEvent;
+import day32_chatting.client.ui.ChattingFrame;
+import day32_chatting.client.ui.LoginFrame;
 public class ClientController {
 	public ChattingFrame frame;
 	public LoginFrame loginFr;

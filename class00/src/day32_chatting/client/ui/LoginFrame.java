@@ -1,10 +1,17 @@
-package chatting.client.ui;
+package day32_chatting.client.ui;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 
-import chatting.client.*;
-import chatting.client.event.ButtonEvent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import day32_chatting.client.ClientController;
 
 public class LoginFrame extends JFrame {
 	public ClientController main;

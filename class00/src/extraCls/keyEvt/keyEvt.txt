@@ -1,0 +1,22 @@
+키 이벤트 (Key Event)
+	사용자가 키보드를 이용하여 입력을 하는 경우에 발생한다.
+	
+	public class MyListener implements KeyListener{
+	
+		public void keyPressed(KeyEvent e) {} -- 사용자가 키를 눌렀을 때
+		public void keyReleased(KeyEvent e) {} --사용자가 키에서 손을 땠을 때
+		public void keyTyped(keyEvent e) {} --사용자가 글자를 입력했을 경우에 호출
+	
+	}
+	
+	 가상 키 번호 KeyEvent클래스에 final변수로 선언되어있을 듯
+	VK_UP, VK_RIGHT, VK_LEFT, VK_DOWN : 방향키
+	VK_ENTER : 엔터
+	
+	keyEvent가 발생하려면 컴포넌트가 반드시 키보드 포커스를 가지고 있어야 한다.
+	
+	예 ) panel.requestFocus();
+		panel.setFocusable(true);
+	
+	e.getKeyCode() 코드를 알아오겠다.
+	

@@ -1,8 +1,6 @@
-package chatting.client.thread;
+package day32_chatting.client.thread;
 
-import chatting.client.*;
-import javax.swing.*;
-import java.io.*;
+import day32_chatting.client.ChatClient01;
 public class ClientTrd01 extends Thread {
 	ChatClient01 main;
 	
