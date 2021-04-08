@@ -1,0 +1,35 @@
+
+#01
+int max(int a, int b) {
+	return a> b ? a: b;
+}
+
+#람다식
+(a,  b) -> a>b?a:b
+
+#02
+int printVar(String name, int i){
+	System.out.println(name+"="+i);
+}
+
+#람다식
+(name, i) -> System.out.println(name+"="+i)
+
+#03
+int square(int x){
+	return x * x;
+}
+
+#람다식
+x -> {return x*x;}
+어.. 한 줄이면 되는데?
+x -> x*x
+
+#04
+int roll() {
+	return (int)(Math.random()*6);
+}
+
+#람다식
+() -> {return (int)(Math.random()*6);}
+() -> (int)(Math.random()*6)

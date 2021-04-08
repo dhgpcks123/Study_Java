@@ -1,0 +1,45 @@
+# java.util.function 패키지
+
+	> 자주 사용되는 다양한 함수형 인터페이스를 제공
+		표준화 된 거 간편하게 사용할 수 있다. 사람마다 새롭게 함수형 인터페이스를 만들 필요가 없다.
+		
+	
+	java.lang.Runnalbe/ void run() 매개변수도 없고, 반환 값도 없어.
+	Supplier<T>/ T get() ->T 매개변수는 없고, 반환값만 잇음
+	Consumer<T>/ T->void accepti(T t) 매개변수는 있고, 반환 값은 없음
+	Function<T,R> T->R apply(T t) ->R 일반적인 함수, 하나의 매개변수를 받아서 결과를 반환
+	Predicate<T> T->boolean test(T t) -> boolean 조건식을 표현하는데 사용됨. 매개변수는 하나, 반환 타입은 boolean
+	
+	Predicate<String> isEmptyStr = s -> s.length() == 0; // 반환 타입이 boolean이어야함.
+	String s = "";
+	
+	if(isEmptyStr.test(s)) //=> if(s.length() ==0)
+		System.out.println("This is an empty String.");
+		
+		
+	> 매개변수가 2개인 함수형 인터페이스
+	Bi 두개라는 말. Bicycle Bi 두개 의미함.
+	BiConsumer<T, U> 매개변수 두개 받고 반환 값 없음
+	//BiSupplier는 없다. 매개변수 x없어야 되는건데? BI존재할 수 없지.
+	BiPredicate<T, U> 두개 받고 반환 값 boolean
+	BiFunction<T, U, R> 두 개 매개 변수<T, U> 받고, 결과 값<R> 반환
+	
+	
+	3개부터는 함수형인터페이스 만들어. 만들어진 거 없음
+	
+	@FunctionalInterface
+	interface TriFunction<T, U, V, R>{
+		R apply(T t, U u, V v);
+	}
+	//1개나 2개면 웬만하면 만들지 말고 있는 거 써라.
+	
+	>매개변수의 타입과 반환타입이 일치하는 함수형 인터페이스
+	UnaryOperator<T> // T-> T apply(T t) -> T
+	BinaryOperator<T> // T, T -> T apply(T t, T t) -> T
+	
+	입출력 같으니까 그냥 <T>만 사용. 그리고 UnarayOperator과 BinaryOpertor씀.
+	
+	
+	
+
+	
